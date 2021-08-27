@@ -1,21 +1,32 @@
 ---
 layout: default
-title: Public Engagement 
+title: 3D printing a brain
 ---
 <div class="blurb">
-	<h1>Public Engagement</h1>
-  <p>I've been actively involved in Public Engagement activities since my MSc. The activities I've taken part in are listed below.</p><br/>
+	<h1>3D printing a brain</h1>
+  <p>Recently, a lab member left and I was hit by a brilliant idea: how about a giving them their own 3D printed brain as a gift? Now, if anyone had had a better idea I think it would have been likely that we'd have abandoned ship, but nobody did, and so I had to make good on my offer: 3D printing a brain, in a pandemic. This documents my efforts and the resources I found helpful.</p>
 	
-<p><i>I took part in <a href="http://soapboxscience.org/">Soapbox Science</a> in July 2018! This was a great experience - standing on an actual soapbox for an hour, 
-	talking about science and interacting with anyone who came by. </p>
- 
-<p>The 'Neurococktails' event on the relationship between genes and drugs of abuse, led by <a href="https://www.psych.ox.ac.uk/team/elizabeth-tunbridge"
-  >Professor Liz Tunbridge</a>. This includes encouraging participants to precipitate the DNA of a strawberry, using a pineapple juice and strong rum mix. 
-  This event has taken place in many forums, such as the Science Museum Lates (in London), and the Curiosity Carnival (at the Pitt Rivers in Oxford).</p>
+  <p>First of all, I found three resources that were incredibly helpful: 
+    <li><a href ="https://riojournal.com/articles.php?journal_name=rio&id=10398">This paper by Chris Madan</a></li>
+    <li><a href="https://www.sculpteo.com/blog/2017/11/08/how-to-3d-print-your-own-brain-using-mri-or-ct-scans-free-software/">This blogplost</a></li> 
+    <li><a href="https://www.instructables.com/3D-print-your-own-brain/">This blogpost</a></li></p>
+
+  <p>I would recommend using Chris Madan's instructions for most of it, but not bothering with the part he's written in code - the meshlab and meshgeometry and tridecimator part. Instead I would install meshlab and play with filters/remeshing, simplification and reconstruction/simplification: quadratic edge decimation, followed by filters/smoothing/laplacian.</p>
     
-  <p>The Emotion Research Exhibition as part of the Oxfordshire Science Festival, led by <a href="https://www.psych.ox.ac.uk/team/susannah-murphy">Dr Susannah Murphy</a>. 
-  This involved discussing and demonstrating emotion research and common paradigms at a 'stall' in the Town Hall.</p>
+  <p>Make sure from meshlab you save as .stl files. You should then install <a href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a> if you're printing from your computer (though not sure how it works in the Institute of Making, I think their computers all have it installed) and mess around with scaling the brain.</p>
   
-  <p>PubHD: In November 2017 I presented my DPhil research to a general audience in ten minutes, using no visual aids, in a pub. 
-	  This was a great opportunity to discuss my research with those I wouldn't normally get to meet!</p></i>
+  <p>The default settings will do too much detail and density for your purposes I suspect, I used layer weight of 0.2, infill density of 10% (though seen things online saying even 2 or 5% is ok), and the print temperature is material dependent but for PLA it's typically around 200 degrees.</p>
+    
+  <p>I would also rotate it so that the surface you're least interested in is at the bottom, and add supports and a skirt - this means that it'll print extra material so that it doesn't go badly wrong when things are not flush to the platform (turns out plastic can't stick to thin air).</p>
+    
+  <p>The institute of making lets you print for free if you want to use less than 100g of plastic - so that's a scale of roughly 50% on the brain (two hemispheres were each 40g or so for me).</p>
+    
+  <p>Just let me know if any of this isn't clear or you have any questions! also i assume you have a mac but freesurfer is a **** to install on a windows machine, so if you need tips on that let me know (I spent a whole evening battling with it).</p>
+
+  <h2>Installing freesurfer</h2>
+  <p>This is a huge pain if you have Windows. In the end, I followed <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FS7_wsl">these instructions</a>.</p>
+     
+  <h2>UCL/ICN specific factors</h2>
+  <p><a href="https://www.instituteofmaking.org.uk/makespace/faqs">The Institute of Making</a> lets you print for free at the time of writing if you want to use less than 100g of plastic.</p>
+    
 </div><!-- /.blurb -->
