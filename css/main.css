@@ -49,3 +49,7 @@ figcaption {
 ol {
 font: 5em,
 }
+
+ol p {
+  font: 1.5em;
+}
