@@ -42,3 +42,10 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+figcaption {
+  display: block;
+  text-align: center;
+}
+ol {
+font: 5em,
+}
