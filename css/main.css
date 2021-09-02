@@ -53,10 +53,6 @@ figure {
   padding: 0.5em;
   border: none;
 }
-ol {
-font: 5em;
-}
-
-ol p {
-  font: 1.5em;
+li {
+ font-size: 1.2em;  
 }
