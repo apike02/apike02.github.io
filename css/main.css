@@ -47,4 +47,5 @@ figure {
 }
 li {
  font-size: 1.2em;  
+ list-style-position: inside;
 }
