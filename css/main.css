@@ -48,4 +48,5 @@ figure {
 li {
  font-size: 1.2em;  
  list-style-position: inside;
+ margin-left:-35px;
 }
